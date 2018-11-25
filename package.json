@@ -1,0 +1,24 @@
+{
+  "name": "startit-movie-finder",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Demonstration project for students. Feburary 16",
+  "scripts": {
+    "init": "wdio --init",
+    "update-standalone": "webdriver-manager update --gecko=false --standalone=false",
+    "test": "wdio ./wdio.conf.js"
+  },
+  "dependencies": {
+    "@types/node": "10.12.10",
+    "@types/mocha": "5.2.5",
+    "@types/webdriverio": "4.13.0",
+    "typescript": "3.1.6",
+    "ts-node": "7.0.1",
+    "webdriverio": "4.14.0"
+  },
+  "devDependencies": {
+    "wdio-mocha-framework": "0.6.4",
+    "wdio-chromedriver-service": "0.1.3",
+    "chromedriver": "2.44.0"
+  }
+}

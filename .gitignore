@@ -1,0 +1,7 @@
+# installed npm dependencies
+node_modules/
+# compiled js and debug files
+*.js
+*.js.map
+# exception is configuration file, since it can't be .ts
+!protractor.conf.js
