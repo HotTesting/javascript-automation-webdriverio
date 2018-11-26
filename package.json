@@ -6,7 +6,8 @@
   "scripts": {
     "init": "wdio --init",
     "update-standalone": "webdriver-manager update --gecko=false --standalone=false",
-    "test": "wdio ./wdio.conf.js"
+    "test": "wdio ./wdio.conf.js",
+    "ci-test": "wdio --host 'ip-5236.sunline.net.ua' --port '4444' --path '/wd/hub' ./wdio.conf.js"
   },
   "dependencies": {
     "@types/node": "10.12.10",
