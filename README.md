@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/StartITProtractorJS/javascript-automation-webdriverio.svg?branch=master)](https://travis-ci.org/StartITProtractorJS/javascript-automation-webdriverio)
+
 # startit movie finder
 Working project for startit students
 
