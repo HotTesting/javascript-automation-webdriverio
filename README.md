@@ -8,15 +8,15 @@ To make sure everything works in this initial repo:
 - do `npm test`
 - you should see chrome browser blinking, and something like this in console:
 ```
-Started
-.
+> startit-movie-finder@0.0.1 ci-test 
+/Documents/GitHub/javascript-automation-webdriverio
+> wdio --host 'ip-5236.sunline.net.ua' --port '4444' --path '/wd/hub'  ./wdio.conf.js
 
 
-1 spec, 0 failures
-Finished in 0.009 seconds
+--Test passed!
+․
 
-[22:55:11] I/launcher - 0 instance(s) of WebDriver still running
-[22:55:11] I/launcher - chrome #01 passed
+1 passing (5.80s)
 ```
 
 
