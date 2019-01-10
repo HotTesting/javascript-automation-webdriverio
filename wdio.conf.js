@@ -15,7 +15,7 @@ exports.config = {
     logLevel: 'silent',
     coloredLogs: true,
     deprecationWarnings: true,
-    baseUrl: 'https://movies-finder.firebaseapp.com/',
+    baseUrl: 'http://ip-5236.sunline.net.ua:38015',
     framework: 'mocha',
     mochaOpts: {
         ui: 'bdd'
