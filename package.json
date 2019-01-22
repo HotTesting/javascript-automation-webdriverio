@@ -11,6 +11,7 @@
     "@types/node": "10.12.10",
     "@types/mocha": "5.2.5",
     "@types/webdriverio": "4.13.0",
+    "@types/cucumber": "^4.0.4",
     "typescript": "3.1.6",
     "ts-node": "7.0.1",
     "webdriverio": "4.14.0"
