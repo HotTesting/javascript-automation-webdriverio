@@ -10,7 +10,7 @@ describe("WDIO", function() {
     browser.pause(1000);
   });
 
-  it("Searching elements on the page", function() {
+  it("Searching elements on the page @SMOKE", function() {
     browser.url("/");
     const tabs = $$(".nav-tabs li");
     tabs.forEach(tab => {
