@@ -11,9 +11,11 @@
     "@types/node": "10.12.10",
     "@types/mocha": "5.2.5",
     "@types/webdriverio": "4.13.0",
+    "@types/chai": "4.1.7",
     "typescript": "3.1.6",
     "ts-node": "7.0.1",
-    "webdriverio": "4.14.0"
+    "webdriverio": "4.14.0",
+    "chai": "4.2.0"
   },
   "devDependencies": {
     "wdio-mocha-framework": "0.6.4",

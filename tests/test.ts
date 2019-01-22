@@ -27,9 +27,17 @@ describe("WDIO", function() {
 
   it("Searching from element to element", function() {
     browser.url("/");
-    const header = $('header')
-    const cartLink = header.$('#cart a')
-    cartLink.click()
+    const header = $("header");
+    const cartLink = header.$("#cart a");
+    cartLink.click();
     browser.pause(1000);
+
+    
+    // try {
+    //   return $('div').isExisting()
+    // } catch (err) {
+    //   return false
+    // } 
+    
   });
 });
