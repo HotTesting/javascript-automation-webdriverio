@@ -1,5 +1,3 @@
-console.log('OLOLO I AM IMPORTED!')
-
 describe("Login", function() {
   if (true) {
     before(function() {
@@ -51,22 +49,12 @@ describe("Login", function() {
       console.log("NESTED2 6");
     });
   });
-  
+
+  // DATA provider example
   [1, 2, 3, 4, 5].map((data, indx) => {
     it("DATA: " + data + "INDX" + indx, function() {
       console.log("GOT ", data, indx);
     });
   });
 
-  it('run if windows', runIfWindows(function () {
-    console.log('WINDOWS!!!')
-  }))
-
 });
-
-function runIfWindows(fn) {
-  if(false) {
-    return fn
-  }
-  return undefined
-}
