@@ -2,7 +2,7 @@ process.env.TS_NODE_FILES = true;
 require("ts-node").register();
 
 exports.config = {
-  specs: ["./tests/test.1.ts"],
+  specs: ["./tests/test.ts"],
   port: "9515",
   path: "/",
   services: ["chromedriver"],
@@ -22,7 +22,15 @@ exports.config = {
     timeout: 120000 // 2 mins
   },
 
+  before: function () {
+    // browser.timeouts("implicit", 1000);
+  },
+
   beforeTest: function () {
       console.log('GLOBAL BEFORE TEST')
+  },
+
+  afterTest: function () {
+    // browser.timeouts("implicit", 1000);
   }
 };
