@@ -2,7 +2,7 @@ process.env.TS_NODE_FILES = true;
 require("ts-node").register();
 
 exports.config = {
-  specs: ["./tests/test.ts"],
+  specs: ["./tests/app/purchase.ts"],
   port: "9515",
   path: "/",
   services: ["chromedriver"],
@@ -27,7 +27,7 @@ exports.config = {
   },
 
   beforeTest: function () {
-      console.log('GLOBAL BEFORE TEST')
+      // console.log('GLOBAL BEFORE TEST')
   },
 
   afterTest: function () {

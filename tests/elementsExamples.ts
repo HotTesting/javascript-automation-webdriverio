@@ -1,9 +1,4 @@
 describe("WDIO", function() {
-  it("Should be alive", function() {
-    browser.url("/");
-    console.log("--Test passed!");
-  });
-
   it("Searching element on the page", function() {
     browser.url("/");
     $('a[href*="popular-products"]').click();
