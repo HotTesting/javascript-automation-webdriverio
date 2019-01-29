@@ -3,47 +3,45 @@ import * as faker from "faker";
 
 describe("Guest", function() {
   it.only("should be able to buy item", function() {
-    browser.url("/");
-    const popularTab = $('a[href*="popular-products"]');
-    popularTab.click();
-    expect($("#box-popular-products").isVisible()).to.be.true;
-
-    const redDuck = $('a[title="Red Duck"]');
-    redDuck.click();
-    browser.waitUntil(
-      () => {
-        return $("#box-product").isVisible();
-      },
-      5000,
-      "Element #box-product was not displayed in 5 secs"
-    );
-    expect($("#box-product").isVisible()).to.be.true;
-    const redDuckText = $("h1.title").getText();
-    expect(redDuckText).to.equal("Red Duck");
-
+    browser.url("/rubber-ducks-c-1/red-duck-p-3");
     $("button.btn-success").click();
-    $(".featherlight-close").click();
-    expect($("#box-product").isVisible()).to.be.false;
-
-    //TODO: fix pause
     browser.pause(1000);
-    const cartQuantity = $("#cart span.quantity").getText();
-    expect(cartQuantity).to.equal("1");
-    $("#cart").click();
+    browser.url("/checkout");
+    // Filling checkout page
     browser.waitForVisible('input[name="firstname"]', 5000);
     $('input[name="firstname"]').setValue("TestFirstName");
     $('input[name="lastname"]').setValue("TestLastName");
     $('input[name="address1"]').setValue("address line 1");
     $('input[name="address2"]').setValue("address line 2");
-    $('input[name="postcode"]').setValue("239123");
+    $('input[name="postcode"]').setValue(faker.address.zipCode());
     $('input[name="city"]').setValue("CityName");
     $('input[name="email"]').setValue(faker.internet.email());
     $('input[name="phone"]').setValue(faker.phone.phoneNumber());
-
+    browser.waitForEnabled('button[name="save_customer_details"]', 5000);
     $('button[name="save_customer_details"]').click();
-    browser.pause(3000)
-    $('button[name="confirm_order"]').click()
+    browser.waitUntil(
+      function() {
+        try {
+          const attr = $('button[name="confirm_order"]').getAttribute(
+            "disabled"
+          );
+          console.log("ATTR", attr);
+          return attr == null;
+        } catch (err) {
+          return false;
+        }
+      },
+      5000,
+      "Confirm order button should become enabled to click"
+    );
+    // browser.waitForEnabled('button[name="confirm_order"]', 5000);
+    $('button[name="confirm_order"]').click();
+    browser.waitForVisible("h1.title", 5000);
+    const confirmationText = $("h1.title").getText();
 
-    browser.pause(15000)
+    expect(confirmationText).to.match(
+      /Your order #.* is successfully completed!/
+    );
+    // Thank you for your purchase. An order confirmation email has been sent. We will process your order shortly.
   });
 });

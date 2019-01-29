@@ -8,7 +8,9 @@ exports.config = {
   services: ["chromedriver"],
   capabilities: [
     {
-      browserName: "chrome"
+      browserName: "chrome",
+      maxInstances: 1,
+      "enableVNC": true
     }
   ],
   sync: true,
