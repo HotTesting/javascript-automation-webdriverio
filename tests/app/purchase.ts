@@ -1,8 +1,47 @@
 import { expect } from "chai";
 import * as faker from "faker";
+import { productDetails, checkout, confirmation } from "../../pageObjects";
+import { OrderDetailsBuilder } from '../../src/customerBuilder';
 
 describe("Guest", function() {
-  it.only("should be able to buy item", function() {
+  it.only("PO should be able to buy item", function() {
+    browser.url("/rubber-ducks-c-1/red-duck-p-3");
+    productDetails.addToCart();
+    checkout.open();
+    checkout.proceedOrderWith(new OrderDetailsBuilder().build());
+    expect(confirmation.isLoaded()).to.equal(
+      true,
+      "Expected that confirmation page appears"
+    );
+    expect(confirmation.confirmationTitle()).to.match(
+      /Your order #.* is successfully completed!/
+    );
+  });
+
+  it("PO should be able to buy item", function() {
+    browser.url("/rubber-ducks-c-1/red-duck-p-3");
+    productDetails.addToCart();
+    checkout.open();
+    checkout.typeFirstName("TestFirstName");
+    checkout.typeLastName("TestLastName");
+    checkout.typeAddress1("address line 1");
+    checkout.typeAddress2("address line 2");
+    checkout.typePostCode(faker.address.zipCode());
+    checkout.typeCity("CityName");
+    checkout.typeEmail(faker.internet.email());
+    checkout.typePhone(faker.phone.phoneNumberFormat());
+    checkout.saveChanges();
+    checkout.confirmOrder();
+    expect(confirmation.isLoaded()).to.equal(
+      true,
+      "Expected that confirmation page appears"
+    );
+    expect(confirmation.confirmationTitle()).to.match(
+      /Your order #.* is successfully completed!/
+    );
+  });
+
+  it("should be able to buy item", function() {
     browser.url("/rubber-ducks-c-1/red-duck-p-3");
     $("button.btn-success").click();
     browser.pause(1000);
@@ -21,15 +60,10 @@ describe("Guest", function() {
     $('button[name="save_customer_details"]').click();
     browser.waitUntil(
       function() {
-        try {
-          const attr = $('button[name="confirm_order"]').getAttribute(
-            "disabled"
-          );
-          console.log("ATTR", attr);
-          return attr == null;
-        } catch (err) {
-          return false;
-        }
+        return (
+          browser.getAttribute('button[name="confirm_order"]', "disabled") ==
+          null
+        );
       },
       5000,
       "Confirm order button should become enabled to click"
