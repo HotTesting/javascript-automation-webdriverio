@@ -2,7 +2,7 @@ process.env.TS_NODE_FILES = true;
 require("ts-node").register();
 
 exports.config = {
-  specs: ["./tests/app/purchase.ts"],
+  specs: ["./tests/elementsExamples.ts"],
   port: "9515",
   path: "/",
   services: ["chromedriver"],

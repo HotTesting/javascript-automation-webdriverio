@@ -27,5 +27,4 @@ describe("WDIO", function() {
     cartLink.click();
     browser.pause(1000);
   });
-
 });
