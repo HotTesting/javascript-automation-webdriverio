@@ -2,7 +2,7 @@ process.env.TS_NODE_FILES = true;
 require("ts-node").register();
 
 exports.config = {
-  specs: ["./tests/elementsExamples.ts"],
+  specs: ["./tests/advanced/test.ts"],
   port: "9515",
   path: "/",
   services: ["chromedriver"],
@@ -13,10 +13,24 @@ exports.config = {
       "enableVNC": true
     }
   ],
+  
+  // multiremote
+  // capabilities: {
+  //   user1: {
+  //     browserName: "chrome",
+  //     maxInstances: 1,
+  //     enableVNC: true
+  //   },
+  //   user2: {
+  //     browserName: "chrome",
+  //     maxInstances: 1,
+  //     enableVNC: true
+  //   }
+  // },
   sync: true,
   logLevel: "silent",
   coloredLogs: true,
-  deprecationWarnings: true,
+  deprecationWarnings: false,
   baseUrl: "http://ip-5236.sunline.net.ua:38015",
   framework: "mocha",
   mochaOpts: {
@@ -24,15 +38,15 @@ exports.config = {
     timeout: 120000 // 2 mins
   },
 
-  before: function () {
+  before: function() {
     // browser.timeouts("implicit", 1000);
   },
 
-  beforeTest: function () {
-      // console.log('GLOBAL BEFORE TEST')
+  beforeTest: function() {
+    // console.log('GLOBAL BEFORE TEST')
   },
 
-  afterTest: function () {
+  afterTest: function() {
     // browser.timeouts("implicit", 1000);
   }
 };
