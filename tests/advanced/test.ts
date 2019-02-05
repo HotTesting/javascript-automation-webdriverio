@@ -12,7 +12,7 @@ describe("WDIO", function() {
     });
   });
 
-  it.only("low level actions - key press", function() {
+  it("low level actions - key press", function() {
     browser.url("http://the-internet.herokuapp.com/key_presses");
     
     browser.pause(1000)
