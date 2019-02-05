@@ -12,6 +12,16 @@ describe("WDIO", function() {
     });
   });
 
+  it.only("low level actions - key press", function() {
+    browser.url("http://the-internet.herokuapp.com/key_presses");
+    
+    browser.pause(1000)
+    browser.keys(['Shift'])
+    browser.pause(1000)
+    browser.keys(['Tab'])
+    browser.pause(5000)
+  });
+
   it("low level actions - drag and drop", function() {
     browser.url("http://the-internet.herokuapp.com/drag_and_drop");
     let a = "#column-a";
@@ -49,7 +59,7 @@ describe("WDIO", function() {
     console.log("Messages", browser.getText("ul#messages"));
   });
 
-  it.only("add command", function() {
+  it("add command", function() {
     // http://v4.webdriver.io/api/utility/addCommand.html
     browser.addCommand("getUrlAndTitle", function(customVar) {
       return {
