@@ -14,12 +14,12 @@ describe("WDIO", function() {
 
   it("low level actions - key press", function() {
     browser.url("http://the-internet.herokuapp.com/key_presses");
-    
-    browser.pause(1000)
-    browser.keys(['Shift'])
-    browser.pause(1000)
-    browser.keys(['Tab'])
-    browser.pause(5000)
+
+    browser.pause(1000);
+    browser.keys(["Shift"]);
+    browser.pause(1000);
+    browser.keys(["Tab", "a"]);
+    browser.pause(5000);
   });
 
   it("low level actions - drag and drop", function() {
@@ -30,7 +30,7 @@ describe("WDIO", function() {
     browser.pause(500);
     browser.buttonDown(0);
     browser.pause(500);
-    $(b).moveToObject();
+    browser.moveToObject(b);
     browser.pause(500);
     browser.buttonUp(0);
     browser.buttonUp(0);
@@ -38,10 +38,21 @@ describe("WDIO", function() {
     console.log("A", $(a).getText());
     console.log("B", $(b).getText());
 
+    //$(a).dragAndDrop(b)
     // browser.dragAndDrop(b, a)
     // browser.pause(5000)
     // console.log('A', $(a).getText())
     // console.log('B', $(b).getText())
+  });
+
+  it("file upload", function() {
+    browser.url("http://the-internet.herokuapp.com/upload");
+    $$("input[type=file]")[1].uploadFile(
+      "/Users/oleksandrkhotemskyi/Documents/GitHub/javascript-automation-webdriverio/tests/advanced/sample_image_750.png"
+    );
+    browser.pause(5000);
+    $("#file-submit").click();
+    browser.pause(10000);
   });
 
   it("Multiremote", function() {
@@ -72,7 +83,24 @@ describe("WDIO", function() {
     var result = browser.getUrlAndTitle("foobar");
     console.log(result);
 
-    //   browser.addCommand('waitForTextToAppear', function ({ selector, text, timeout, timeoutMsg, interval }) {
+    //     browser.addCommand('waitForTextToAppear', function ({ selector, text, timeout = 10000, timeoutMsg, interval }) {
+    //       browser.waitUntil(function () {
+    //           try {
+    //               // Some strange bug happens: ELEMENT of null
+    //               // https://github.com/webdriverio/webdriverio/issues/1811
+    //               let txtActual = browser.getText(selector)
+    //               if (Array.isArray(txtActual)) {
+    //                   // Many elements found
+    //                   txtActual = txtActual[0]
+    //               }
+    //               return txtActual.includes(text)
+    //           } catch (err) {
+    //               return false
+    //           }
+    //       }, timeout, timeoutMsg, interval)
+    //   })
+
+    //   browser.addCommand('customWait', function ({ selector, text, timeout = 10000, timeoutMsg, interval }) {
     //     browser.waitUntil(function () {
     //         try {
     //             // Some strange bug happens: ELEMENT of null
@@ -88,5 +116,31 @@ describe("WDIO", function() {
     //         }
     //     }, timeout, timeoutMsg, interval)
     // })
+
+    //   browser.waitForTextToAppear({selector:'div', text:'TEXT'})
+  });
+
+  it("should inject javascript on the page", function() {
+    browser.url("/");
+    browser.pause(2000);
+    
+    browser.execute(function(elem) { 
+      console.log(elem)
+      // @ts-ignore
+      document.querySelector(elem.selector).click()
+    }, $('[href="http://ip-5236.sunline.net.ua:38015/acme-corp-m-1/"]'));
+    
+    // browser.selectorExecute(
+    //   '[href="http://ip-5236.sunline.net.ua:38015/acme-corp-m-1/"]',
+
+    //   function(elem: any) {
+    //     '[href="http://ip-5236.sunline.net.ua:38015/acme-corp-m-1/"]'.click();
+    //   }
+    // );
+
+    // node.js context - client and console are available
+    //console.log(result.value); // outputs: 10
+
+    browser.pause(30000);
   });
 });
