@@ -1,10 +1,10 @@
 import { expect } from "chai";
 import * as faker from "faker";
 import { productDetails, checkout, confirmation } from "../../pageObjects";
-import { OrderDetailsBuilder } from '../../src/customerBuilder';
+import { OrderDetailsBuilder } from "../../src/customerBuilder";
 
 describe("Guest", function() {
-  it.only("PO should be able to buy item", function() {
+  it("PO should be able to buy item with builder", function() {
     browser.url("/rubber-ducks-c-1/red-duck-p-3");
     productDetails.addToCart();
     checkout.open();
@@ -18,7 +18,7 @@ describe("Guest", function() {
     );
   });
 
-  it("PO should be able to buy item", function() {
+  it("PO should be able to buy item #23842", function() {
     browser.url("/rubber-ducks-c-1/red-duck-p-3");
     productDetails.addToCart();
     checkout.open();

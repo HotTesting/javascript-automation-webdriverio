@@ -10,9 +10,16 @@
       "name": "Debug",
       "program": "${workspaceFolder}/node_modules/.bin/wdio",
       "sourceMaps": true,
-      "args": ["./wdio.conf.debug.js", "--spec", "./tests/parallel/test.1.ts"],
+      "args": [
+        "./wdio.conf.debug.js", 
+        // "--spec", 
+        // "'./tests/parallel/*.ts'"
+        // "--grep",
+        // "#23842"
+      ],
       "env": {
-        "DEBUG": "1"
+        "DEBUG": "1",
+        "SUT_URL": "http://ip-5236.sunline.net.ua:38015"
       },
       "port": 5858,
       "console": "integratedTerminal",

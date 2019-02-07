@@ -2,14 +2,14 @@ process.env.TS_NODE_FILES = true;
 require("ts-node").register();
 
 exports.config = {
-  specs: ["./tests/advanced/test.ts"],
+  specs: ["./tests/parallel/*.ts"],
   port: "9515",
   path: "/",
   services: ["chromedriver"],
   capabilities: [
     {
       browserName: "chrome",
-      maxInstances: 1,
+      maxInstances: 5,
       "enableVNC": true
     }
   ],
@@ -50,3 +50,6 @@ exports.config = {
     // browser.timeouts("implicit", 1000);
   }
 };
+
+
+asdflkjasdf
