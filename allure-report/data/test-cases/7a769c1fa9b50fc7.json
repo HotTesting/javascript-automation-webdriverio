@@ -1,0 +1,57 @@
+{
+  "uid" : "7a769c1fa9b50fc7",
+  "name" : "DEBUG NODEJS #1",
+  "fullName" : "WDIO.DEBUG NODEJS #1",
+  "historyId" : "788d2c778e0f479b2dadafe13174df01",
+  "time" : {
+    "start" : 1549993857603,
+    "stop" : 1549993858613,
+    "duration" : 1010
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "wdio"
+  }, {
+    "name" : "language",
+    "value" : "javascript"
+  }, {
+    "name" : "thread",
+    "value" : "0-0"
+  }, {
+    "name" : "suite",
+    "value" : "WDIO"
+  }, {
+    "name" : "testClass",
+    "value" : "WDIO"
+  }, {
+    "name" : "testMethod",
+    "value" : "DEBUG NODEJS #1"
+  }, {
+    "name" : "package",
+    "value" : "WDIO"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ {
+    "name" : "browser",
+    "value" : "chrome"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7a769c1fa9b50fc7.json",
+  "parameterValues" : [ "chrome" ]
+}

@@ -1,0 +1,65 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "Searching element on the page 2",
+    "uid" : "46230b3ac0e0a566",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1549993857602,
+      "stop" : 1549993859725,
+      "duration" : 2123
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "DEBUG NODEJS #1",
+    "uid" : "7a769c1fa9b50fc7",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1549993857603,
+      "stop" : 1549993858613,
+      "duration" : 1010
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "Searching element on the page 1",
+    "uid" : "8fd34345584b72b4",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1549993857629,
+      "stop" : 1549993861084,
+      "duration" : 3455
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "Searching element on the page 5",
+    "uid" : "46955b3b3ab90f3e",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1549993857710,
+      "stop" : 1549993861552,
+      "duration" : 3842
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  }, {
+    "name" : "Searching element on the page 3",
+    "uid" : "530cf3e654663d31",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1549993857779,
+      "stop" : 1549993862126,
+      "duration" : 4347
+    },
+    "flaky" : false,
+    "parameters" : [ "chrome" ]
+  } ]
+}

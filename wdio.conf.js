@@ -13,6 +13,16 @@ exports.config = {
       "enableVNC": true
     }
   ],
+  // reporters: ['spec'],
+  // http://v4.webdriver.io/guide/reporters/allure.html
+  // allure generate ./allure-results && allure open
+  // Dont forget to install allure commandline tools and JAVA !
+  reporters: ['dot', 'allure'],
+  reporterOptions: {
+      allure: {
+          outputDir: 'allure-results'
+      }
+  },
   
   // multiremote
   // capabilities: {
@@ -50,6 +60,3 @@ exports.config = {
     // browser.timeouts("implicit", 1000);
   }
 };
-
-
-asdflkjasdf

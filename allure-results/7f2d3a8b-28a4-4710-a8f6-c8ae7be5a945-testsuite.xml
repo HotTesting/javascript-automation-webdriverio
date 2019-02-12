@@ -1,0 +1,23 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1549994133061' stop='1549994134079'>
+    <name>WDIO</name>
+    <title>WDIO</title>
+    <test-cases>
+        <test-case start='1549994133062' status='passed' stop='1549994134079'>
+            <name>DEBUG NODEJS #1</name>
+            <title>DEBUG NODEJS #1</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"browserName":"chrome","maxInstances":5,"enableVNC":true}'/>
+                <parameter kind='environment-variable' name='spec files' value='["/Users/oleksandrkhotemskyi/Documents/GitHub/javascript-automation-webdriverio/tests/parallel/test.1.ts"]'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -62,12 +62,17 @@ class Checkout {
     $(lastNameInput).setValue(lastName);
   }
   typeFirstName(firstName: string): any {
-    const firstNameInput = 'input[name="firstname"]';
-    browser.waitForVisible(firstNameInput, 5000);
-    $(firstNameInput).setValue(firstName);
+    this.type('input[name="firstname"]', firstName)
   }
   open() {
     browser.url("/checkout");
+  }
+  private type(element, value) {
+      browser.waitForVisible(element, 5000);
+      $(element).click()
+      // $(emailInput).clearElement()
+      browser.pause(500)
+      $(element).setValue(value);
   }
 }
 

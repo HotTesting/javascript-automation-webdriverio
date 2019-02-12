@@ -1,0 +1,50 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1549993857710' stop='1549993861553'>
+    <name>WDIO</name>
+    <title>WDIO</title>
+    <test-cases>
+        <test-case start='1549993857710' status='passed' stop='1549993861552'>
+            <name>Searching element on the page 5</name>
+            <title>Searching element on the page 5</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-4'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+                <parameter kind='environment-variable' name='capabilities' value='{"browserName":"chrome","maxInstances":5,"enableVNC":true}'/>
+                <parameter kind='environment-variable' name='spec files' value='["/Users/oleksandrkhotemskyi/Documents/GitHub/javascript-automation-webdriverio/tests/parallel/test.5.ts"]'/>
+            </parameters>
+            <steps>
+                <step start='1549993857716' status='passed' stop='1549993860386'>
+                    <name>POST /session/37b54baded7d10857f0aea61bbaf5aec/url</name>
+                    <title>POST /session/37b54baded7d10857f0aea61bbaf5aec/url</title>
+                    <attachments>
+                        <attachment title='Request' source='ce441611-059a-4139-a254-aef5c60a0abe-attachment.json' type='application/json' size='53'/>
+                        <attachment title='Response' source='4043246f-e9de-4aa9-acf3-76de02c69785-attachment.json' type='application/json' size='91'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1549993860392' status='passed' stop='1549993860410'>
+                    <name>POST /session/37b54baded7d10857f0aea61bbaf5aec/element</name>
+                    <title>POST /session/37b54baded7d10857f0aea61bbaf5aec/element</title>
+                    <attachments>
+                        <attachment title='Request' source='7ac066ea-2178-45b0-95aa-a8de30837a16-attachment.json' type='application/json' size='77'/>
+                        <attachment title='Response' source='22cec7e7-4a29-48c0-8ccd-9fcc49abd75c-attachment.json' type='application/json' size='136'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1549993860415' status='passed' stop='1549993860545'>
+                    <name>POST /session/37b54baded7d10857f0aea61bbaf5aec/element/0.8209912693175077-1/click</name>
+                    <title>POST /session/37b54baded7d10857f0aea61bbaf5aec/element/0.8209912693175077-1/click</title>
+                    <attachments>
+                        <attachment title='Response' source='20e2930d-e1d1-4e87-b287-a3196e29ce2c-attachment.json' type='application/json' size='91'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

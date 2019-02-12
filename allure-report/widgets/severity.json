@@ -1,0 +1,51 @@
+[ {
+  "uid" : "46230b3ac0e0a566",
+  "name" : "Searching element on the page 2",
+  "time" : {
+    "start" : 1549993857602,
+    "stop" : 1549993859725,
+    "duration" : 2123
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7a769c1fa9b50fc7",
+  "name" : "DEBUG NODEJS #1",
+  "time" : {
+    "start" : 1549993857603,
+    "stop" : 1549993858613,
+    "duration" : 1010
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8fd34345584b72b4",
+  "name" : "Searching element on the page 1",
+  "time" : {
+    "start" : 1549993857629,
+    "stop" : 1549993861084,
+    "duration" : 3455
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "46955b3b3ab90f3e",
+  "name" : "Searching element on the page 5",
+  "time" : {
+    "start" : 1549993857710,
+    "stop" : 1549993861552,
+    "duration" : 3842
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "530cf3e654663d31",
+  "name" : "Searching element on the page 3",
+  "time" : {
+    "start" : 1549993857779,
+    "stop" : 1549993862126,
+    "duration" : 4347
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

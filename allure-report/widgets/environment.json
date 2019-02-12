@@ -1,0 +1,7 @@
+[ {
+  "values" : [ "{\"browserName\":\"chrome\",\"maxInstances\":5,\"enableVNC\":true}" ],
+  "name" : "capabilities"
+}, {
+  "values" : [ "[\"/Users/oleksandrkhotemskyi/Documents/GitHub/javascript-automation-webdriverio/tests/parallel/test.3.ts\"]" ],
+  "name" : "spec files"
+} ]
